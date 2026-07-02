@@ -18,7 +18,7 @@ Serving **MiniMax-M3-AWQ-INT4 at a full `1,048,576`-token context window** acros
 | KV pool @ GMU 0.80 | 965,376 tokens | **1,308,928 tokens (+36%)** |
 | Max context / request | 262,144 | **1,048,576 (1M)** |
 | Concurrency @ that context | 3.68× @ 262K | **1.25× @ 1M** |
-| Decode tok/s (single) | ~33.7 | ~17.8 *(Phase 1 — see tradeoff)* |
+| Decode tok/s (single) | ~33.7 | ~25.2 *(Phase 2 inline; Phase 1 was ~17.8)* |
 | Generation | coherent | coherent ✅ |
 
 **nvfp4 KV nearly halves per-token KV memory → the pool grows enough that one request can hold a full 1M-token context.** Same 4× GB10 hardware, same model, coherent output.
